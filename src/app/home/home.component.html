@@ -1,0 +1,229 @@
+<div class="container">
+  <div *ngIf="discountAvailable" class="discount-timer-box">
+    <div class="top-section">
+      <h3 class="discount-sale-text">Discount Sale Week</h3>
+      <p class="time-left-text">Time Left on Sale:</p>
+    </div>
+    <div class="middle-section">
+      <div class="timer-container">
+          <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p class="buy-everything-text">Buy Everything with</p>
+      <p class="discount-percent">{{ discountPercent }}% Discount</p>
+    </div>
+  </div>
+
+  <ngb-carousel *ngIf="popularProducts">
+    <ng-template  *ngFor="let item of popularProducts" ngbSlide>
+      <div class="picsum-img-wrapper">
+        <a routerLink="/details/{{item.id}}"> <img class="product-header-image" src="{{imageBase+item.image}}" alt="Random first slide">
+     </a>
+        </div>
+      <!-- <div class="carousel-caption">
+        <h3>{{item.name}}</h3>
+        <p>{{item.description}}</p>
+      </div> -->
+    </ng-template>
+  </ngb-carousel>
+
+
+
+  <h1>New Arrivals</h1>
+  <owl-carousel-o [options]="customOptions" class="carousels">
+    <ng-template carouselSlide *ngFor="let item of newArrivals">
+      <div class="carousels-slide">
+
+        <!-- <img [src]="imageBaseUrl+item.image" alt="" class="carousels-image"> -->
+        <a routerLink="/details/{{item.id}}"> <img class="product-header-image" src="{{imageBase+item.image}}" alt="" class="carousels-image">
+        </a>
+        <div class="carousels-title">{{ item.name }}</div>
+        <h3 style="font-size: medium; text-align: center;">Price:
+          <span [ngClass]="{'original-price': isDiscountAvailable(item)}" *ngIf="isDiscountAvailable(item); else originalPrice">{{item.price | currency:'INR'}}</span>
+          <ng-template #originalPrice>
+            <span>{{item.price | currency:'INR'}}</span>
+          </ng-template>
+        </h3>
+        <!-- <h3 class="discounted-price" *ngIf="isDiscountAvailable(data.item.cart)">{{discountavailable(item) | currency:'INR'}}</h3> -->
+
+
+        <h3 class="discounted-price" *ngIf="isDiscountAvailable(item)">{{getDiscountedPrice(item) | currency:'INR'}}</h3>
+        <div class="carousels-author">{{ "Author: " + item.authorname }}</div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+
+
+
+  <div class="product-list-wrapper">
+    <h1>Trendy Products</h1>
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let item of trendyProducts">
+        <div class="product-item">
+          <a routerLink="/details/{{item.id}}"> <img class="product-header-image" src="{{imageBase+item.image}}" alt="Random first slide">
+          </a>
+        <div class="product-details">
+          <h6 class="name-head">{{item.name}}</h6>
+          <div class="product-color">
+            <h6>Author Name:{{item.authorname}}</h6>
+          </div>
+          <!-- <div class="product-price">
+            <h6>Price:{{item.price}}</h6>
+          </div> -->
+          <h3 style="font-size: medium; text-align: center;">Price:
+            <span [ngClass]="{'original-price': isDiscountAvailable(item)}" *ngIf="isDiscountAvailable(item); else originalPrice">{{item.price | currency:'INR'}}</span>
+            <ng-template #originalPrice>
+              <span>{{item.price | currency:'INR'}}</span>
+            </ng-template>
+          </h3>
+          <h3 class="discounted-price" *ngIf="isDiscountAvailable(item)">{{getDiscountedPrice(item) | currency:'INR'}}</h3>
+
+
+        </div>
+        <!-- <div [ngSwitch]="isSeller">
+          <ul *ngSwitchCase="'user'">
+            <div class="product-footer">
+              <a routerLink="/details/{{item.id}}">View Details</a>
+              <button  (click)="addToCart()">Add to Cart</button>
+            </div>
+          </ul>
+          <ul *ngSwitchCase="'seller'">
+            <div class="product-footer">
+              <a routerLink="/details/{{item.id}}">View Details</a>
+            </div>
+          </ul>
+          <ul *ngSwitchCase="'default'">
+            <div class="product-footer">
+              <a routerLink="/details/{{item.id}}">View Details</a>
+            </div>
+          </ul>
+        </div> -->
+        <!-- <div class="product-footer">
+          <a routerLink="/details/{{item.id}}">View Details</a>
+          <a href="">Add to Cart</a>
+
+        </div> -->
+
+      </div>
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="carousel-wrapper">
+  <owl-carousel-o [options]="custom" class="carouselss">
+    <ng-template carouselSlide *ngFor="let item of trendyProducts">
+      <div class="carouselss-slide">
+        <img [src]="item.image" alt="" class="carouselss-image">
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div> -->
+
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ -->
+
+
+<!--
+
+<div class="product-list-wrapper">
+<h1>Trendy Products</h1>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let item of trendyProducts">
+    <div class="product-item">
+      <img src="{{item.image}}" alt="">
+    <div class="product-details">
+      <h6 class="name-head">{{item.name}}</h6>
+      <div class="product-price">
+        <h6>Price:{{item.price}}</h6>
+      </div>
+      <div class="product-color">
+        <h6>Color:{{item.color}}</h6>
+      </div>
+    </div>
+    <div class="product-footer">
+      <a routerLink="/details/{{item.id}}">View Details</a>
+      <a href="">Add to Cart</a>
+
+    </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+</div>
+<app-footer></app-footer> -->
+
+
+<!--
+
+  <h1>Trendy Products</h1>
+  <owl-carousel-o [options]="customOptions" class="carousels">
+    <ng-template carouselSlide *ngFor="let item of trendyProducts">
+      <div class="carousels-slide">
+        <img [src]="item.image" alt="" class="carousels-image">
+        <div class="carousels-title">{{ item.name }}</div>
+        <div class="carousels-price">{{ "Price: " + item.price }}</div>
+        <div class="carousels-color">{{ "Color: " + item.color }}</div>
+        <div class="product-footer">
+          <a routerLink="/details/{{ item.id }}">View Details</a>
+          <a href="">Add to Cart</a>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o> -->
+<!--
+<h1>New Arrivals</h1>
+<owl-carousel-o [options]="customOptions" class="carousels">
+  <ng-template carouselSlide *ngFor="let item of newArrivals">
+    <div class="carousels-slide">
+      <img [src]="item.image" alt="" class="carousels-image">
+      <div class="carousels-title">{{ item.name }}</div>
+      <div class="carousels-price">{{ "Price: " + item.price }}</div>
+      <div class="carousels-author">{{ "Author: " + item.authorname }}</div>
+    </div>
+  </ng-template>
+</owl-carousel-o>
+
+
+
+<div class="product-list-wrapper">
+<h1>Trendy Products</h1>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let item of trendyProducts">
+    <div class="product-item">
+      <img src="{{item.image}}" alt="">
+    <div class="product-details">
+      <h6 class="name-head">{{item.name}}</h6>
+      <div class="product-price">
+        <h6>Price:{{item.price}}</h6>
+      </div>
+      <div class="product-color">
+        <h6>Color:{{item.color}}</h6>
+      </div>
+    </div>
+    <div class="product-footer">
+      <a routerLink="/details/{{item.id}}">View Details</a>
+      <a href="">Add to Cart</a>
+
+    </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+</div> -->
+<app-footer></app-footer>

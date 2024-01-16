@@ -1,0 +1,91 @@
+<!-- <nav class="nav">
+  <h1><img class src="https://www.logolynx.com/images/logolynx/aa/aa3993182ad88a047d21fbcc09b44d04.png" alt="Icon" class="icon">
+    <a routerLink="" class="bookstore-name">Ahdews Bookstore</a></h1>
+  <div *ngIf="menuType!=='seller'  && !isMyOrdersPage" class="nav-search">
+    <input type="text"
+    #searchInput
+    (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search Books"/>
+    <button (click)="submitSearch(searchInput.value)">Search</button>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="menuType">
+  <ul *ngSwitchCase="'default'">
+    <li><a routerLink="seller-auth">Admin</a></li>
+    <li><a routerLink="">Home</a></li>
+    <li><a routerLink="user-auth">Login/SignUp</a></li>
+    <li><a href="#">Cart({{cartItems}})</a></li>
+  </ul>
+  <ul *ngSwitchCase="'user'">
+    <li><a routerLink="all-products">Books</a></li>
+
+
+    <li><a routerLink="my-orders">My Orders</a></li>
+    <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
+    <li><select [(ngModel)]="selectedCategory" (change)="onCategorySelect($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select></li>
+    <li><a>{{userName|titlecase}}</a></li>
+    <li><a (click)="userLogout()">LogOut</a></li>
+
+  </ul>
+  <ul *ngSwitchCase="'seller'">
+    <li><a routerLink="seller-add-product">Add Book</a></li>
+    <li><a routerLink="seller-home">List</a></li>
+    <li><a (click)="logout()">Logout</a></li>
+    <li><a href="#">{{sellerName|titlecase}}</a></li>
+  </ul>
+</div>
+</nav> -->
+
+
+<nav class="nav">
+  <h1><img class src="https://www.logolynx.com/images/logolynx/aa/aa3993182ad88a047d21fbcc09b44d04.png" alt="Icon" class="icon">
+    <a routerLink="" class="bookstore-name">Ahdews Bookstore</a></h1>
+  <div *ngIf="menuType!=='seller'  && !isMyOrdersPage" class="nav-search">
+    <input type="text"
+    #searchInput
+    (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search Books"/>
+    <button (click)="submitSearch(searchInput.value)">Search</button>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="menuType">
+  <ul *ngSwitchCase="'default'">
+    <li><a routerLink="auth">Login</a></li>
+    <li><a routerLink="">Home</a></li>
+    <!-- <li><a routerLink="user-auth">Login/SignUp</a></li> -->
+    <li><a routerLink="auth">Cart({{cartItems}})</a></li>
+    <!-- <li><a (click)="userLogout()">LogOut</a></li> -->
+
+  </ul>
+  <ul *ngSwitchCase="'user'">
+    <li><a routerLink="all-products">Books</a></li>
+    <!-- <li><a routerLink="">Home</a></li> -->
+
+    <li><a routerLink="my-orders">My Orders</a></li>
+    <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
+    <li><select [(ngModel)]="selectedCategory" (change)="onCategorySelect($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select></li>
+    <li><a>{{userName|titlecase}}</a></li>
+    <li><a (click)="userLogout()">LogOut</a></li>
+
+  </ul>
+  <ul *ngSwitchCase="'seller'">
+    <li><a routerLink="seller-add-product">Add Book</a></li>
+    <li><a routerLink="seller-home">List</a></li>
+    <li><a routerLink="order-history">orders</a></li>
+    <li><a (click)="logout()">Logout</a></li>
+    <li><a href="#">{{sellerName|titlecase}}</a></li>
+  </ul>
+</div>
+</nav>

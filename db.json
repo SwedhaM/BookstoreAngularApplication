@@ -1,0 +1,451 @@
+{
+  "seller": [
+    {
+      "name": "Swedha M",
+      "password": "swedha25",
+      "email": "swedha0025@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Buchy Kutty",
+      "password": "buchy25",
+      "email": "murugaiyanlatha6@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Sujitha P",
+      "password": "sujitha25",
+      "email": "sujithaarul14@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Abdul Kalam A P j",
+      "password": "admin1",
+      "email": "swedha0025@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Swedha M",
+      "password": "swedha25",
+      "email": "swedha0025@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Buchy Kutty",
+      "password": "swedha",
+      "email": "murugaiyanlatha6@gmail.com",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Child of the Kindred",
+      "price": "550",
+      "authorname": "Mishal",
+      "category": "Fantasy",
+      "color": "black",
+      "description": "Good",
+      "image": "https://th.bing.com/th/id/OIP.cvexECPTvVLzlZWuLoaRegHaL2?pid=ImgDet&rs=1",
+      "id": 3
+    },
+    {
+      "name": "Turn of the Light",
+      "price": "350",
+      "authorname": "Claura",
+      "category": "Fantasy",
+      "color": "Gold",
+      "description": "Super",
+      "image": "https://th.bing.com/th/id/R.687d05f63d7d85920f27164170af91b5?rik=UC%2biEoryMDYTEA&riu=http%3a%2f%2fwww.rantingdragon.com%2fanticipation%2fbestof2013%2fbig%2f19.jpg&ehk=bXmuBANK%2fWQUnraFL%2fV8Vl%2bLRaeMYHeswmJo1x97YD8%3d&risl=&pid=ImgRaw&r=0",
+      "id": 4
+    },
+    {
+      "name": "Goosebumps",
+      "price": "350",
+      "authorname": "James",
+      "category": "Horror",
+      "color": "Red",
+      "description": "Very scary",
+      "image": "https://imgix.bustle.com/2016/6/4/2-0a21d5c0-a555-492a-9dd0-4f87b8ba3f5a.jpg?w=414&h=599&fit=crop&crop=faces&auto=format%2Ccompress&q=50&dpr=2",
+      "id": 5
+    },
+    {
+      "name": "Demon Inside",
+      "price": "750",
+      "authorname": "Lucas",
+      "category": "Horror",
+      "color": "Yellow",
+      "description": "Scary",
+      "image": "https://thebookcoverdesigner.com/wp-content/uploads/2017/05/Horror-Book1-683x1024.jpg",
+      "id": 6
+    },
+    {
+      "name": "No Land's Man",
+      "price": "550",
+      "authorname": "Linton",
+      "category": "Humour",
+      "color": "Blue",
+      "description": "Very Comedy",
+      "image": "https://img.washingtonpost.com/rf/image_742w/2010-2019/WashingtonPost/2014/12/19/Style/Images/comedybooks-0021419015670.jpg?uuid=Z6jFpoexEeSrz1o9ezsguA",
+      "id": 7
+    },
+    {
+      "name": "In you own backyard",
+      "price": "250",
+      "authorname": "Jimin",
+      "category": "Kids",
+      "color": "Green",
+      "description": "Kids Story Books",
+      "image": "https://99designs-blog.imgix.net/wp-content/uploads/2017/07/attachment_73599840-e1500060411553.png?auto=format&q=60&fit=max&w=930",
+      "id": 8
+    },
+    {
+      "name": "Oxford First Dictionary",
+      "price": "340",
+      "authorname": "Aalia",
+      "category": "Dictionary",
+      "color": "Blue",
+      "description": "Awesome",
+      "image": "https://th.bing.com/th/id/OIP.65rrnmxYSkRNa6F8X7KC-gHaIw?pid=ImgDet&rs=1",
+      "id": 9
+    },
+    {
+      "name": "Oxford Paperback Dictionary and Thesaurus",
+      "price": "370",
+      "authorname": "Jhonson",
+      "category": "Dictionary",
+      "color": "Blue",
+      "description": "Awesome",
+      "image": "https://images.thenile.io/r1000/9780199558469.jpg",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "name": "Swedha M",
+      "email": "swedha0025@gmail.com",
+      "password": "Swedha25",
+      "id": 1
+    },
+    {
+      "name": "buchy",
+      "email": "murugaiyanlatha6@gmail.com",
+      "password": "buchy25",
+      "id": 2
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "email": "swedha0025@gmail.com",
+      "address": "No 15 Thanthai periyar street, Nellikuppam",
+      "contact": "9600583122",
+      "totalPrice": 2350,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "email": "swedha0025@gmail.com",
+      "address": "No 15 Thanthai periyar street, Nellikuppam",
+      "contact": "9600583122",
+      "totalPrice": 402.5,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "swedha M",
+      "email": "swedha0025@gmail.com",
+      "address": "",
+      "paymentMethod": "cashOnDelivery",
+      "totalPrice": 310,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "swedha M",
+      "email": "swedha0025@gmail.com",
+      "address": "",
+      "paymentMethod": "cashOnDelivery",
+      "totalPrice": 310,
+      "userId": 1,
+      "id": 4
+    }
+  ],
+  "logs": [
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGFAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTd2VkaGEgTSIsIlVzZXJJZCI6IjgiLCJleHAiOjE2OTA5NDIzNTYsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.ViKy2GTpycK2EnoWjScAZoIsbUgrh1rhjUIkKzYpmSg",
+        "id": 8,
+        "name": "Swedha M",
+        "email": "swedha@gmail.com",
+        "phoneNumber": "+919600583122",
+        "address": "No 15 Thanthai periyar street, Nellikuppam"
+      },
+      "id": 1
+    },
+    {
+      "message": "Login successful.",
+      "id": 2
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGEwMDI1QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3dlZGhhIE0iLCJVc2VySWQiOiIxIiwiZXhwIjoxNjkwOTQyNTc0LCJpc3MiOiJNeVdlYkFQSSIsImF1ZCI6Ik15Q2xpZW50cyJ9.u_d8AzeqPNnRuIHUNd-FmlOo5tJG81ktbhmhRFQfsvA",
+        "id": 1,
+        "name": "swedha M",
+        "email": "swedha0025@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 3
+    },
+    {
+      "message": "Login successful.",
+      "id": 4
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGEwMDI1QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3dlZGhhIE0iLCJVc2VySWQiOiIxIiwiZXhwIjoxNjkwOTUwOTA5LCJpc3MiOiJNeVdlYkFQSSIsImF1ZCI6Ik15Q2xpZW50cyJ9.IQXSlUhiSwRiVVfC3lLyKhEBjpWBNFx8j3dgHTd6nE4",
+        "id": 1,
+        "name": "swedha M",
+        "email": "swedha0025@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 5
+    },
+    {
+      "message": "Login successful.",
+      "id": 6
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE2OTA5NTE1ODIsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.JaNS_1dMBiD7W5uczr-yXK53MIlhJSQMaO0XR5kTyZU",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 7
+    },
+    {
+      "message": "Login successful.",
+      "id": 8
+    },
+    {
+      "message": "LoggedOut successfully.",
+      "id": 9
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE2OTA5NTk2NjUsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.cs5-OM8CFJCs4x80LyuZCinZOd6n4UXBFyKETbkvE78",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 10
+    },
+    {
+      "message": "Login successful.",
+      "id": 11
+    },
+    {
+      "message": "LoggedOut successfully.",
+      "id": 12
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGFAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTd2VkaGEgTSIsIlVzZXJJZCI6IjgiLCJleHAiOjE2OTA5NjMzOTAsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.L6yrhtncGpRPv6L07n4bellhSxpzhLRoktt6ml3JhOU",
+        "id": 8,
+        "name": "Swedha M",
+        "email": "swedha@gmail.com",
+        "phoneNumber": "+919600583122",
+        "address": "No 15 Thanthai periyar street, Nellikuppam"
+      },
+      "id": 13
+    },
+    {
+      "message": "Login successful.",
+      "id": 14
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE2OTA5NzA3MzIsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.-gLn1Kv2kitbHf-UIWQsiiaMSJHDRcvxN5TWgK1ZcIU",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 15
+    },
+    {
+      "message": "Login successful.",
+      "id": 16
+    },
+    {
+      "message": "LoggedOut successfully.",
+      "id": 17
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGFAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTd2VkaGEgTSIsIlVzZXJJZCI6IjgiLCJleHAiOjE2OTA5NzA5MDAsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.EgVMsMb1zPuO6I9Jm9PIxhWvIvNGblL4t_A4uj5TQ_8",
+        "id": 8,
+        "name": "Swedha M",
+        "email": "swedha@gmail.com",
+        "phoneNumber": "+919600583122",
+        "address": "No 15 Thanthai periyar street, Nellikuppam"
+      },
+      "id": 18
+    },
+    {
+      "message": "Login successful.",
+      "id": 19
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGFAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTd2VkaGEgTSIsIlVzZXJJZCI6IjgiLCJleHAiOjE2OTA5NzYwMjMsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.bEtfFh9xFFp_O4bnZMDyEu_8jlvMsTESkplWCzxzHjo",
+        "id": 8,
+        "name": "Swedha M",
+        "email": "swedha@gmail.com",
+        "phoneNumber": "+919600583122",
+        "address": "No 15 Thanthai periyar street, Nellikuppam"
+      },
+      "id": 20
+    },
+    {
+      "message": "Login successful.",
+      "id": 21
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE2OTEwNTEyMDAsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.Fh0Xl7vL4LN9NC1t332jzJ3Yd4WcS4vuajYBaWuBqGU",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 22
+    },
+    {
+      "message": "Login successful.",
+      "id": 23
+    },
+    {
+      "message": "LoggedOut successfully.",
+      "id": 24
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGFAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJTd2VkaGEgTSIsIlVzZXJJZCI6IjgiLCJleHAiOjE2OTE1MTE5MjYsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.jQ-Hchn2DTaslol4g9f3N0JgL7dIitzINFm6fUMbJ6Y",
+        "id": 8,
+        "name": "Swedha M",
+        "email": "swedha@gmail.com",
+        "phoneNumber": "+919600583122",
+        "address": "No 15 Thanthai periyar street, Nellikuppam"
+      },
+      "id": 25
+    },
+    {
+      "message": "Login successful.",
+      "id": 26
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE2OTE3NDU3NzYsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.37ON3HGx0nJ98iLsK1Qll9qUH1PMmwB6-cMBmhBv_xA",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 27
+    },
+    {
+      "message": "Login successful.",
+      "id": 28
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGEwMDI1QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3dlZGhhIE0iLCJVc2VySWQiOiIxIiwiZXhwIjoxNjkyMDA3NjY1LCJpc3MiOiJNeVdlYkFQSSIsImF1ZCI6Ik15Q2xpZW50cyJ9.avJ6Hr4ZEjzxNIOdKM6vg8CK8dqZ4xM67wpzR15yeUg",
+        "id": 1,
+        "name": "swedha M",
+        "email": "swedha0025@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 29
+    },
+    {
+      "message": "Login successful.",
+      "id": 30
+    },
+    {
+      "message": {
+        "headers": {
+          "normalizedNames": {},
+          "lazyUpdate": null
+        },
+        "status": 401,
+        "statusText": "Unauthorized",
+        "url": "http://localhost:5285/Authentication/login",
+        "ok": false,
+        "name": "HttpErrorResponse",
+        "message": "Http failure response for http://localhost:5285/Authentication/login: 401 Unauthorized",
+        "error": "Invalid email or password"
+      },
+      "id": 31
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGEwMDI1QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3dlZGhhIE0iLCJVc2VySWQiOiIxIiwiZXhwIjoxNjk2MTM1NzMzLCJpc3MiOiJNeVdlYkFQSSIsImF1ZCI6Ik15Q2xpZW50cyJ9.sq2i5Vo8sQ1bY0mcYiX838rxEoITr4Hy0-lTH2gKKa0",
+        "id": 1,
+        "name": "swedha M",
+        "email": "swedha0025@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 32
+    },
+    {
+      "message": "Login successful.",
+      "id": 33
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzd2VkaGEwMDI1QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3dlZGhhIE0iLCJVc2VySWQiOiIxIiwiZXhwIjoxNzAzMTQ2ODc3LCJpc3MiOiJNeVdlYkFQSSIsImF1ZCI6Ik15Q2xpZW50cyJ9.q2PsnWDo99YsvmR5gP-fspzWfFjsXoc734f0olYjnxc",
+        "id": 1,
+        "name": "swedha M",
+        "email": "swedha0025@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 34
+    },
+    {
+      "message": "Login successful.",
+      "id": 35
+    },
+    {
+      "message": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtdXJ1Z2FpeWFubGF0aGE2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InNlbGxlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJidWNoeSIsIlVzZXJJZCI6IjIiLCJleHAiOjE3MDMxNDY5NDEsImlzcyI6Ik15V2ViQVBJIiwiYXVkIjoiTXlDbGllbnRzIn0.EN_OXH6WT9-_wvey_tMf5gfQcT44e_vvXaZYpLPtdy4",
+        "id": 2,
+        "name": "buchy",
+        "email": "murugaiyanlatha6@gmail.com",
+        "phoneNumber": "",
+        "address": ""
+      },
+      "id": 36
+    },
+    {
+      "message": "Login successful.",
+      "id": 37
+    },
+    {
+      "message": "LoggedOut successfully.",
+      "id": 38
+    }
+  ]
+}

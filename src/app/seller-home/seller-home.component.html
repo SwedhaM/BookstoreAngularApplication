@@ -1,0 +1,103 @@
+ <!-- <div class="container">
+ <div class="product-list">
+  <h1 class="htag">Book List</h1>
+  <p class="message-p">{{ productMessage }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Author</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productList">
+        <td><img src="{{ item.image }}" /></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price|currency:'INR' }}</td>
+        <td>{{ item.authorname }}</td>
+        <td>{{ item.color }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+          <a class="adjust-update-link" routerLink="/seller-update-product/{{item.id}}"><fa-icon [icon]="iconEdit"></fa-icon></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div> -->
+
+<!-- <div style="width:60%">
+  <h3>Products</h3>
+  <div *ngIf="products">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{product.name}}</td>
+
+              <td>
+
+                  <img style="height:80px;width:100px;" [src]="imageBaseUrl+product.image">
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div> -->
+
+<div class="container">
+ <div class="product-list">
+  <h1 class="htag">Book List</h1>
+  <p class="message-p">{{ productMessage }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Author</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <td><img style="height:80px;width:100px;" [src]="imageBaseUrl+item.image"/></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price|currency:'INR' }}</td>
+        <td>{{ item.authorname }}</td>
+        <td>{{ item.color }}</td>
+        <td>{{ item.category }}</td>
+        <td [ngClass]="{ 'description-cell': !item.expanded, 'show-more-link': !item.expanded }"
+            [ngStyle]="{ 'max-height': item.expanded ? 'none' : '80px' }">
+          {{ item.expanded ? item.description : item.truncatedDescription }}
+          <span *ngIf="!item.expanded" (click)="toggleDescription(item)" class="show-more-link">See more</span>
+          <span *ngIf="item.expanded" (click)="toggleDescription(item)" class="show-more-link">See less</span>
+        </td>
+
+
+        <td>
+          <fa-icon class="deleteProduct" (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+          <a class="adjust-update-link" routerLink="/seller-update-product/{{item.id}}"><fa-icon [icon]="iconEdit"></fa-icon></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

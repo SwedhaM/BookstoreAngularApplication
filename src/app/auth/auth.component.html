@@ -1,0 +1,52 @@
+
+<body style="  background-image:url('1.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;">
+<div>
+  <div *ngIf="!showLogin" class="inner-container">
+    <div class="box">
+      <h1>Sign-up</h1>
+      <form (ngSubmit)="signup()"class="common-form">
+        <!-- <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> -->
+        <div class="radio-group">
+          <label><input type="radio" name="role" value="seller" [(ngModel)]="authRole" required>Admin</label>
+          <label><input type="radio" name="role" value="user" [(ngModel)]="authRole" required>User</label>
+        </div>
+        <div class="form-row">
+        <div class="form-column">
+        <input type="text" class="form-input" placeholder="Enter Name" name="name" [(ngModel)]="SignUpData.name" [required]="authRole === 'user'" />
+        <input type="password" class="form-input" placeholder="Enter Password" name="password" [(ngModel)]="SignUpData.password" required />
+        <input type="text" class="form-input" placeholder="Enter Email" name="email" [(ngModel)]="SignUpData.email" required />
+        </div>
+        <div class="form-column">
+            <input type="password" class="form-input" placeholder="Confirm Password" name="confirmpassword"  [(ngModel)]="SignUpData.confirmpassword" required />
+            <div *ngIf="SignUpData.password !== SignUpData.confirmpassword && SignUpData.confirmpassword !== ''" class="error-message">
+              Password and Confirm Password must match.
+            </div>
+
+            <input type="text" class="form-input" placeholder="Enter Address" name="address"  [(ngModel)]="SignUpData.address" required/>
+            <input type="text" class="form-input" placeholder="Enter Phone Number" name="phonenumber"  [(ngModel)]="SignUpData.phonenumber" required />
+        </div>
+      </div>
+        <button type="submit" class="form-button">Sign Up</button>
+        <a class="auth-toggle-link" (click)="openLogin()">Already have an account? Click here to login</a>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="showLogin" class="inner-containers" style="height:450px;">
+    <div class="box">
+    <h1>Login</h1>
+    <form (ngSubmit)="login()"class="common-form">
+      <div class="radio-group">
+        <label><input type="radio" name="role" value="seller" [(ngModel)]="authRole" required>Admin</label>
+        <label><input type="radio" name="role" value="user" [(ngModel)]="authRole" required>User</label>
+      </div>
+      <input type="text" class="form-input" placeholder="Enter Email" name="email" [(ngModel)]="loginData.email" required />
+      <input type="password" class="form-input" placeholder="Enter Password" name="password" [(ngModel)]="loginData.password" required />
+      <button type="submit" class="form-button">Login</button>
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have an account? Click here to sign up</a>
+      <!-- <div *ngIf="LoginerrorMessage" class="error-message">{{ LoginerrorMessage }}</div> -->
+    </form>
+    </div>
+  </div>
+</div>

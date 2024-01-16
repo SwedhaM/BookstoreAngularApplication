@@ -1,0 +1,54 @@
+<!--
+<div class="product-list-wrapper">
+  <h1>Books</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let item of allProducts">
+      <div class="product-item">
+        <img src="{{item.image}}" alt="">
+      <div class="product-details">
+        <h6 class="name-head">{{item.name}}</h6>
+        <div class="product-price">
+          <h6>Price:{{item.price}}</h6>
+        </div>
+        <div class="product-color">
+          <h6>Color:{{item.color}}</h6>
+        </div>
+        <ngb-rating [max]="5" (click)="GetRating()" [formControl]="ratingcontrol"></ngb-rating>
+      </div>
+      <div class="product-footer">
+        <a routerLink="/details/{{item.id}}">View Details</a>
+        <ngb-rating [max]="5" [rate]="Finalrating" [readonly]="true"></ngb-rating>
+
+      </div>
+      </div>
+    </div>
+
+
+  </div>
+  </div> -->
+  <div class="container">
+  <div class="product-list-wrapper">
+    <h1>Books</h1>
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let item of allProducts">
+        <div class="product-item">
+          <img [src]="imageBaseUrl+item.image"/>
+          <div class="product-details">
+            <h6 class="name-head">{{ item.name }}</h6>
+            <div class="product-price">
+              <h6>Price: {{ item.price }}</h6>
+            </div>
+            <div class="product-color">
+              <h6>Color: {{ item.color }}</h6>
+            </div>
+            <ngb-rating [max]="5" [rate]="ratings[item.id]?.finalRating.toString()" [readonly]="true"></ngb-rating>
+          </div>
+          <div class="product-footer">
+            <a routerLink="/details/{{ item.id }}">View Details</a>
+            <ngb-rating [max]="5" (click)="getRating(item.id.toString())" [formControl]="ratingControl"></ngb-rating>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

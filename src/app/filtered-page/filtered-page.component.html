@@ -1,0 +1,57 @@
+<div class="container">
+  <div *ngIf="discountAvailable" class="discount-timer-box">
+    <div class="top-section">
+      <h3 class="discount-sale-text">Discount Sale Week</h3>
+      <p class="time-left-text">Time Left on Sale:</p>
+    </div>
+    <div class="middle-section">
+      <div class="timer-container">
+          <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p class="buy-everything-text">Buy Everything with</p>
+      <p class="discount-percent">{{ discountPercent }}% Discount</p>
+    </div>
+  </div>
+  <div class="product-list-wrapper">
+  <h1>Books</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let product of filteredProducts">
+      <div class="product-item">
+        <img [src]="imageBaseUrl+product.image"/>
+        <div class="product-details">
+          <h6 class="name-head">{{ product.name }}</h6>
+          <div class="product-price">
+            <h6>Price: {{ product.price }}</h6>
+          </div>
+          <div class="product-color">
+            <h6>Color: {{ product.color }}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a routerLink="/details/{{ product.id }}">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <p>
+  filtered-page works!
+</p>
+<div class="filtered-page">
+  <h2>Filtered Products</h2>
+
+  <div *ngIf="filteredProducts.length === 0">
+    <p>No products found.</p>
+  </div>
+
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img [src]="product.image" alt="Product Image">
+    <h3>{{ product.name }}</h3>
+    <p>Price: {{ product.price }}</p>
+    <p>Category: {{ product.category }}</p>
+    <p>Description: {{ product.description }}</p>
+  </div>
+</div> -->

@@ -1,0 +1,252 @@
+
+<div class="container">
+  <div *ngIf="discountAvailable" class="discount-timer-box">
+    <div class="top-section">
+      <h3 class="discount-sale-text">Discount Sale Week</h3>
+      <p class="time-left-text">Time Left on Sale:</p>
+    </div>
+    <div class="middle-section">
+      <div class="timer-container">
+          <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p class="buy-everything-text">Buy Everything with</p>
+      <p class="discount-percent">{{ discountPercent }}% Discount</p>
+    </div>
+  </div>
+  <div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+      <div class="col-sm-7">
+        <h3>Add shipping address</h3>
+        <p class="message-p">{{orderMsg}}</p>
+        <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+          <div class="form-group">
+            <label for="name">User Name:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter User Name" [(ngModel)]="shippingData.name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">User Email:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter User Email" [(ngModel)]="shippingData.email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">User Address:</label>
+            <input type="text" class="form-control" name="address" id="address" placeholder="Enter User Address" [(ngModel)]="shippingData.address" required>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Details:</label>
+            <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter contact details" [(ngModel)]="shippingData.phonenumber" required>
+          </div>
+          <div class="payment-method">
+            <h4>Payment Method:</h4>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="paymentMethod" id="cashOnDelivery" value="cashOnDelivery" [(ngModel)]="selectedPaymentMethod" required>
+              <label class="form-check-label" for="cashOnDelivery">Cash on Delivery</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="paymentMethod" id="onlinePayment" value="onlinePayment" [(ngModel)]="selectedPaymentMethod" required>
+              <label class="form-check-label" for="onlinePayment">Online Payment</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Order Now</button>
+        </form>
+      </div>
+      <div class="col-sm-5">
+        <h3>Total Amount: {{totalPrice | currency:'INR'}}</h3>
+        <div *ngIf="selectedPaymentMethod === 'cashOnDelivery'" class="cash-on-delivery-summary">
+          <p>Your order will be delivered soon.</p>
+          <img src="https://th.bing.com/th/id/R.77324b7bffe240d5a698091928296d44?rik=fdlLXNIjIY9u5g&riu=http%3a%2f%2fthesplendidlifestyle.com%2fwp-content%2fuploads%2f2019%2f08%2fdelivery.png&ehk=6it3QaR03%2bUA%2fYaNsq5JJQvYeFoIx8eusDr1b59eMps%3d&risl=&pid=ImgRaw&r=0" width="400px" height="200px">
+        </div>
+        <div *ngIf="selectedPaymentMethod === 'onlinePayment'" class="online-payment-summary">
+          <div class="form-group">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" class="form-control" name="cardNumber" id="cardNumber" placeholder="Enter Card Number" [(ngModel)]="shippingData.cardNumber" required maxlength="16">
+            <span *ngIf="!isCardNumberValid()" class="error-message">Card number must be exactly 16 digits</span>
+          </div>
+          <div class="form-group">
+            <label for="pin">PIN:</label>
+            <input type="password" class="form-control" name="pin" id="pin" placeholder="Enter PIN" [(ngModel)]="shippingData.pin" required maxlength="4">
+            <span *ngIf="!isPinValid()" class="error-message">PIN must be exactly 4 digits</span>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter Amount" [(ngModel)]="totalPrice" [disabled]="true" required>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="checkout">
+  <h1>Checkout</h1>
+  <div class="row">
+    <div class="col-sm-7">
+      <h3>Add shipping address</h3>
+      <p class="message-p">{{orderMsg}}</p>
+      <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+        <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel />
+        <input type="text" class="form-input" name="address" placeholder="Enter User Address" ngModel />
+        <input type="text" class="form-input" name="contact" placeholder="Enter contact details" ngModel />
+        <button class="form-button">Order Now</button>
+      </form>
+    </div>
+    <div class="col-sm-5">
+      <h3>Total Amount: {{totalPrice|currency:'INR'}}</h3>
+      <h4>Payment Method : <b>Cash on delivery</b></h4>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<!--
+<div class="container">
+  <div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+      <div class="col-sm-7">
+        <h3>Add shipping address</h3>
+        <p class="message-p">{{orderMsg}}</p>
+        <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+          <input type="text" class="form-input" name="email" placeholder="Enter User Email" ngModel />
+          <input type="text" class="form-input" name="address" placeholder="Enter User Address" ngModel />
+          <input type="text" class="form-input" name="contact" placeholder="Enter contact details" ngModel />
+          <button class="form-button">Order Now</button>
+        </form>
+      </div>
+      <div class="col-sm-5">
+        <h3>Total Amount: {{totalPrice|currency:'INR'}}</h3>
+        <h4>Payment Method: <b>{{ selectedPaymentMethod === 'cashOnDelivery' ? 'Cash on Delivery' : 'Online Payment' }}</b></h4>
+        <div *ngIf="selectedPaymentMethod === 'cashOnDelivery'">
+          <div class="cash-on-delivery">
+            <p>Angular v16 launched</p>
+            <button (click)="payNow()">Pay amount</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!--
+<div class="container">
+  <div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+      <div class="col-sm-7">
+        <h3>Add shipping address</h3>
+        <p class="message-p">{{orderMsg}}</p>
+        <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+          <input type="text" class="form-input" name="name" placeholder="Enter User Name"  [(ngModel)]="shippingData.name" />
+          <input type="text" class="form-input" name="email" placeholder="Enter User Email"  [(ngModel)]="shippingData.email" />
+          <input type="text" class="form-input" name="address" placeholder="Enter User Address"  [(ngModel)]="shippingData.address" />
+          <input type="text" class="form-input" name="contact" placeholder="Enter contact details"  [(ngModel)]="shippingData.phonenumber" />
+          <div class="payment-method">
+            <h4>Payment Method:</h4>
+            <label>
+              <input type="radio" name="paymentMethod" value="cashOnDelivery" [(ngModel)]="selectedPaymentMethod">
+              Cash on Delivery
+            </label>
+            <label>
+              <input type="radio" name="paymentMethod" value="onlinePayment" [(ngModel)]="selectedPaymentMethod">
+              Online Payment
+            </label>
+          </div>
+          <button class="form-button">Order Now</button>
+        </form>
+      </div>
+      <div class="col-sm-5">
+        <h3>Total Amount: {{totalPrice|currency:'INR'}}</h3>
+        <div class="payment-method">
+          <h4>Payment Method:</h4>
+          <label>
+            <input type="radio" name="paymentMethod" value="cashOnDelivery" [(ngModel)]="selectedPaymentMethod">
+            Cash on Delivery
+          </label>
+          <label>
+            <input type="radio" name="paymentMethod" value="onlinePayment" [(ngModel)]="selectedPaymentMethod">
+            Online Payment
+          </label>
+        </div>
+        <div *ngIf="selectedPaymentMethod === 'cashOnDelivery'">
+          <div class="cash-on-delivery">
+            <p>Your order has been placed successfully.</p>
+          </div>
+        </div>
+        <div *ngIf="selectedPaymentMethod === 'onlinePayment'">
+          <div class="online-payment">
+            <p>Angular v16 launched</p>
+            <button (click)="payNow()" [disabled]="paymentSuccess">Pay amount</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!--
+<div class="container">
+  <div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+      <div class="col-sm-7">
+        <h3>Add shipping address</h3>
+        <p class="message-p">{{orderMsg}}</p>
+        <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+          <div class="form-group">
+            <label for="name">User Name:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter User Name" [(ngModel)]="shippingData.name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">User Email:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter User Email" [(ngModel)]="shippingData.email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">User Address:</label>
+            <input type="text" class="form-control" name="address" id="address" placeholder="Enter User Address" [(ngModel)]="shippingData.address" required>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Details:</label>
+            <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter contact details" [(ngModel)]="shippingData.phonenumber" required>
+          </div>
+          <div class="payment-method">
+            <h4>Payment Method:</h4>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="paymentMethod" id="cashOnDelivery" value="cashOnDelivery" [(ngModel)]="selectedPaymentMethod" required>
+              <label class="form-check-label" for="cashOnDelivery">Cash on Delivery</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="paymentMethod" id="onlinePayment" value="onlinePayment" [(ngModel)]="selectedPaymentMethod" required>
+              <label class="form-check-label" for="onlinePayment">Online Payment</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Order Now</button>
+        </form>
+      </div>
+      <div class="col-sm-5">
+        <h3>Total Amount: {{totalPrice | currency:'INR'}}</h3>
+        <div class="payment-method">
+          <h4>Payment Method:</h4>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="paymentMethod" id="cashOnDeliverySummary" value="cashOnDelivery" [(ngModel)]="selectedPaymentMethod" required>
+            <label class="form-check-label" for="cashOnDeliverySummary">Cash on Delivery</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="paymentMethod" id="onlinePaymentSummary" value="onlinePayment" [(ngModel)]="selectedPaymentMethod" required>
+            <label class="form-check-label" for="onlinePaymentSummary">Online Payment</label>
+          </div>
+        </div>
+        <div *ngIf="selectedPaymentMethod === 'cashOnDelivery'" class="cash-on-delivery-summary">
+          <p>Your order has been placed successfully.</p>
+        </div>
+        <div *ngIf="selectedPaymentMethod === 'onlinePayment'" class="online-payment-summary">
+          <p>Angular v16 launched</p>
+          <button type="button" class="btn btn-primary" (click)="payNow()" [disabled]="paymentSuccess">Pay amount</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,86 @@
+<div class="container">
+<div *ngIf="discountAvailable" class="discount-timer-box">
+  <div class="top-section">
+    <h3 class="discount-sale-text">Discount Sale Week</h3>
+    <p class="time-left-text">Time Left on Sale:</p>
+  </div>
+  <div class="middle-section">
+    <div class="timer-container">
+        <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <p class="buy-everything-text">Buy Everything with</p>
+    <p class="discount-percent">{{ discountPercent }}% Discount</p>
+  </div>
+</div>
+
+<div class="row product-details" *ngIf="productData">
+  <div class="col-sm-6">
+    <img  class="product-img" [src]="imageBaseUrl+productData.image" alt=""/>
+  </div>
+  <div class="col-sm-6">
+    <div class="details">
+      <h1>{{productData.name}}</h1>
+      <h3>
+        <span [ngClass]="{'discounted-price': isDiscountAvailable()}" *ngIf="isDiscountAvailable(); else originalPrice">{{productData.price | currency:'INR'}}</span>
+        <ng-template #originalPrice>
+          <span>{{productData.price | currency:'INR'}}</span>
+        </ng-template>
+      </h3>
+      <h3 *ngIf="isDiscountAvailable()">Discounted Price: {{getDiscountedPrice() | currency:'INR'}}</h3>
+      <div>Color:
+        <h3 [style.backgroundColor]="productData.color" class="product-color"></h3>
+      </div>
+      <h6>Author: {{productData.authorname}}</h6>
+      <h6>Category: {{productData.category}}</h6>
+      <h6>Description: {{productData.description}}</h6>
+      <!-- <button class="form-button">Buy Now</button> -->
+      <!-- <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">Remove from Cart</button>
+      <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
+      <div class="quantity-group">
+        <button (click)="handleQuantity('min')">-</button>
+        <input type="text" value="{{productQuantity}}" />
+        <button (click)="handleQuantity('plus')">+</button>
+      </div> -->
+      <div [ngSwitch]="isSeller">
+        <ul *ngSwitchCase="'user'">
+          <!-- <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">Remove from Cart</button> -->
+          <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
+          <div class="quantity-group">
+            <button (click)="handleQuantity('min')">-</button>
+            <input type="text" value="{{productQuantity}}" />
+            <button (click)="handleQuantity('plus')">+</button>
+          </div>
+        </ul>
+        <ul *ngSwitchCase="'seller'">
+        </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- <div class="row product-details" *ngIf="productData">
+  <div class="col-sm-6">
+  <img  class="product-img" src="{{productData.image}}" alt="">
+  </div>
+  <div class="col-sm-6">
+      <div class="details">
+          <h1>{{productData.name}}</h1>
+          <h3>Price : {{productData.price}}</h3>
+          <div>Color :<h3 [style.backgroundColor]="productData.color" class="product-color"></h3></div>
+          <h6>Category : {{productData.category}}</h6>
+          <h6>Description : {{productData.description}}</h6>
+          <button class="form-button">Buy Now</button>
+          <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">Remove to Cart</button>
+        <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
+          <div class="quantity-group">
+            <button (click)="handleQuantity('min')" >-</button>
+            <input type="text" value="{{productQuantity}}" />
+            <button (click)="handleQuantity('plus')">+</button>
+
+        </div>
+      </div>
+  </div>
+  </div> -->

@@ -1,0 +1,133 @@
+.cart-page{
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.cart-page h1{
+  text-align: center;
+}
+.details img{
+  height: 100px;
+}
+.details ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+
+}
+.summary h3{
+  text-align: center;
+}
+
+.summary ul {
+  border: 1px solid #ddd;
+  list-style-type: none;
+  padding: 15px;
+}
+.summary ul li{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.discounted-price{
+  text-decoration: line-through;
+}
+
+.discount-timer-box {
+  background-image: url('https://th.bing.com/th/id/R.8f34f4872a254b8bff46db7aca7070bd?rik=eWAGmVHYNzqPNw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fxo1DOKG.jpg&ehk=Op8Sxa6%2brJt6eHK86izfuFnbd%2fNNYADk1HlS3qsg3RY%3d&risl=&pid=ImgRaw&r=0');
+  background-size: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  position: fixed;
+  top: 50px; /* Adjust the top value as needed */
+  left: 10%;
+  transform: translateX(-50%);
+  z-index: 9999; /* Set a high z-index to ensure it appears above other elements */
+}
+
+.discount-timer-box .top-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.discount-timer-box .middle-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.discount-timer-box .bottom-section {
+  text-align: center;
+}
+
+.discount-sale-text {
+  font-size: 24px;
+  color: white;
+}
+
+.time-left-text {
+  font-size: 16px;
+  text-decoration: underline;
+  color: white;
+}
+
+.timer-container {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  color: greenyellow;
+}
+.timer-container:hover{
+  transform: scale(1.3);
+  color: red;
+}
+
+.discount-timer {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.timer-digit {
+  display: inline-block;
+  padding: 0 2px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.buy-everything-text {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.discount-percent {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+.discount-percent:hover {
+  transform: scale(1.3);
+  color: red; /* Adjust the scale value as desired */
+}
+
+
+.sale-image {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}

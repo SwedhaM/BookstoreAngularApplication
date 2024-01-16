@@ -1,0 +1,55 @@
+<div class="container">
+  <div *ngIf="discountAvailable" class="discount-timer-box">
+    <div class="top-section">
+      <h3 class="discount-sale-text">Discount Sale Week</h3>
+      <p class="time-left-text">Time Left on Sale:</p>
+    </div>
+    <div class="middle-section">
+      <div class="timer-container">
+          <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p class="buy-everything-text">Buy Everything with</p>
+      <p class="discount-percent">{{ discountPercent }}% Discount</p>
+    </div>
+  </div>
+<div class="my-orders">
+  <h1>My Orders</h1>
+  <div class="row">
+      <div class="col-sm-2">
+          <span>Orders</span>
+      </div>
+      <div class="col-sm-2">
+          <span>Order Id</span>
+      </div>
+      <div class="col-sm-2">
+          <span>Price</span>
+      </div>
+      <div class="col-sm-2">
+          <span>Status</span>
+      </div>
+      <div class="col-sm-2">
+         <span>Cancel Order</span>
+      </div>
+  </div>
+  <div class="row" *ngFor="let order of orderData">
+      <div class="col-sm-2">
+          <img class="order-img" src="https://www.clipartmax.com/png/middle/210-2106541_track-my-order-beach-volleyball.png" alt="">
+      </div>
+      <div class="col-sm-2">
+          <span>#{{order.id}}</span>
+      </div>
+      <div class="col-sm-2">
+          <span>{{order.totalPrice}}</span>
+      </div>
+      <div class="col-sm-2">
+          <span>In Progress</span>
+      </div>
+      <div class="col-sm-2">
+          <button class="form-button" (click)="cancelOrder(order.id)">Cancel Order</button>
+      </div>
+  </div>
+
+</div>
+</div>

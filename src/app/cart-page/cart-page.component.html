@@ -1,0 +1,257 @@
+<!--
+
+<div class="container">
+  <div class="cart-page">
+    <h1>Cart Page</h1>
+    <div class="row">
+      <div class="col-sm-8 details">
+        <ul *ngFor="let cart of cartData">
+          <li>
+            <img src="{{ cart.image }}" alt="">
+          </li>
+          <li>
+            <span>{{ cart.name }}</span>
+          </li>
+          <li>
+            <span>Price: {{ (isDiscountAvailable() ? cart.price : cart.originalPrice) | currency:'INR' }}</span>
+            <span *ngIf="cart.originalPrice && isDiscountAvailable()"> ({{ cart.originalPrice | currency:'INR' }})</span>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+            <button (click)="increaseQuantity(cart)">+</button>
+            <button (click)="decreaseQuantity(cart)">-</button>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+          </li>
+          <li>
+            <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>
+            <span>Amount:</span>
+            <span>{{ priceSummary.originalPrice | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Tax:</span>
+            <span>{{ priceSummary.tax | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Delivery:</span>
+            <span>{{ priceSummary.delivery | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>
+              <h4>Total</h4>
+            </span>
+            <span>
+              <h4>{{ priceSummary.total | currency:'INR' }}</h4>
+            </span>
+          </li>
+          <button (click)="checkout()" class="form-button max-width">Checkout</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+<!--
+
+ <div class="container">
+  <div class="cart-page">
+    <h1>Cart Page</h1>
+    <div class="row">
+      <div class="col-sm-8 details">
+        <ul *ngFor="let cart of cartData">
+          <li>
+            <img src="{{ cart.image }}" alt="">
+          </li>
+          <li>
+            <span>{{ cart.name }}</span>
+          </li>
+          <li>
+            <span>Price: {{ (isDiscountAvailable() ? cart.price : priceSummary.originalPrice) | currency:'INR' }}</span>
+            <span *ngIf="cart.originalPrice && isDiscountAvailable()"> ({{ cart.originalPrice | currency:'INR' }})</span>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+            <button (click)="increaseQuantity(cart)">+</button>
+            <button (click)="decreaseQuantity(cart)">-</button>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+          </li>
+          <li>
+            <span>{{ isDiscountAvailable() ? cart.price : priceSummary.originalPrice | currency:'INR' }}</span>
+          </li>
+          <li>
+            <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 summary">
+        <h3>Summary</h3>
+        <ul *ngFor="let cart of cartData">
+
+          <span>Amount:</span>
+          <span>{{ isDiscountAvailable() ? cart.price : priceSummary.originalPrice | currency:'INR' }}</span>
+
+          <li>
+            <span>Tax:</span>
+            <span>{{ priceSummary.tax | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Delivery:</span>
+            <span>{{ priceSummary.delivery | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>
+              <h4>Total</h4>
+            </span>
+            <span>
+              <h4>{{ priceSummary.total | currency:'INR' }}</h4>
+            </span>
+          </li>
+          <button (click)="checkout()" class="form-button max-width">Checkout</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!--
+
+
+<div class="container">
+  <div class="cart-page">
+    <h1>Cart Page</h1>
+    <div class="row">
+      <div class="col-sm-8 details">
+        <ul *ngFor="let cart of cartData">
+          <li>
+            <img src="{{ cart.image }}" alt="">
+          </li>
+          <li>
+            <span>{{ cart.name }}</span>
+          </li>
+          <li>
+            <button (click)="increaseQuantity(cart)">+</button>
+            <button (click)="decreaseQuantity(cart)">-</button>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+          </li>
+          <li>
+            <span>{{ isDiscountAvailable() ? (cart.price | currency:'INR'): (priceSummary.originalPrice | currency:'INR') }}</span>
+          </li>
+          <li>
+            <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 summary">
+        <h3>Summary</h3>
+        <ul *ngFor="let cart of cartData">
+          <li>
+          <span>Amount:</span>
+          <span>{{ isDiscountAvailable() ? cart.price : priceSummary.originalPrice | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Tax:</span>
+            <span>{{ priceSummary.tax | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Delivery:</span>
+            <span>{{ priceSummary.delivery | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>
+              <h4>Total</h4>
+            </span>
+            <span>
+              <h4>{{ priceSummary.total | currency:'INR' }}</h4>
+            </span>
+          </li>
+          <button (click)="checkout()" class="form-button max-width">Checkout</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <div *ngIf="discountAvailable" class="discount-timer-box">
+    <div class="top-section">
+      <h3 class="discount-sale-text">Discount Sale Week</h3>
+      <p class="time-left-text">Time Left on Sale:</p>
+    </div>
+    <div class="middle-section">
+      <div class="timer-container">
+          <p class="timer-digit">{{ remainingTime | countdownTimer }}</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <p class="buy-everything-text">Buy Everything with</p>
+      <p class="discount-percent">{{ discountPercent }}% Discount</p>
+    </div>
+  </div>
+  <div class="cart-page">
+    <h1>Cart Page</h1>
+    <div class="row">
+      <div class="col-sm-8 details">
+        <ul *ngFor="let cart of cartData">
+          <li>
+            <img src="{{ imageBaseUrl+cart.image }}" alt="">
+          </li>
+          <li>
+            <span>{{ cart.name }}</span>
+          </li>
+          <li>
+            <button (click)="increaseQuantity(cart)">+</button>
+            <button (click)="decreaseQuantity(cart)">-</button>
+          </li>
+          <li>
+            <span>Quantity: {{ cart.quantity }}</span>
+          </li>
+          <li>
+            <span>{{ isDiscountAvailable() ? (cart.price | currency:'INR'): (cart.originalPrice  | currency:'INR') }}</span>
+          </li>
+          <li>
+            <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>
+            <span>Amount:</span>
+            <span>{{ isDiscountAvailable() ? (priceSummary.discountedPrice | currency:'INR'): (priceSummary.originalPrice | currency:'INR') }}</span>
+          </li>
+          <li>
+            <span>Tax:</span>
+            <span>{{ priceSummary.tax | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>Delivery:</span>
+            <span>{{ priceSummary.delivery | currency:'INR' }}</span>
+          </li>
+          <li>
+            <span>
+              <h4>Total</h4>
+            </span>
+            <span>
+              <h4>{{ priceSummary.total | currency:'INR' }}</h4>
+            </span>
+          </li>
+          <button (click)="checkout()" class="form-button max-width">Checkout</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="product-list">
+   <h1 class="htag">Order List</h1>
+   <table>
+     <thead>
+       <tr>
+         <th>Order ID</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Address</th>
+         <th>Contact</th>
+         <th>Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let item of orderHistory">
+         <td>{{ item. id}}</td>
+         <td>{{ item.name }}</td>
+         <td>{{ item.email }}</td>
+         <td>{{ item.address }}</td>
+         <td>{{ item. contact}}</td>
+         <td>{{ item. totalPrice|currency:'INR'}}</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ </div>

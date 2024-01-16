@@ -1,0 +1,161 @@
+/* h1{
+  color: blueviolet;
+  text-align: center;
+}
+.add-product{
+  text-align: center;
+} */
+/*
+.add-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.add-product-image {
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.add-product-content {
+  flex-grow: 1;
+}
+
+.add-product h1 {
+  color: blueviolet;
+  text-align: center;
+}
+
+.add-product .message-p {
+  color: blueviolet;
+  text-align: center;
+}
+
+.common-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px blueviolet;
+}
+
+.form-input::placeholder {
+  color: blueviolet;
+}
+
+.form-input[type="text"],
+.form-input[type="textarea"] {
+  height: 40px;
+}
+
+.form-button {
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #8a2be2;
+} */
+
+.add-product {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  /* background-color: #c9abec;
+  border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.add-product-image {
+  flex: 1;
+  height: 550px;
+  background-image: url('https://2.bp.blogspot.com/-195LuxdFXDk/WDTAoeNW8FI/AAAAAAAAJn0/CVzfRtTLQCM50aSngjs-RhLlZUwv2ZbtwCLcB/s1600/book%2Bcharacter.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.add-product-content {
+  flex: 1;
+}
+
+.add-product h1 {
+  color: blueviolet;
+  text-align: center;
+}
+
+.add-product .message-p {
+  color: blueviolet;
+  text-align: center;
+}
+
+.common-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #c3b0d5;
+}
+
+.common-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(16, 9, 23);
+}
+
+.form-input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.form-input[type="text"],
+.form-input[type="textarea"] {
+  height: 40px;
+}
+
+.form-button {
+  padding: 10px 20px;
+  background-color: rgb(82, 77, 86);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: blueviolet;
+}
+
+/* Rest of the form styles */
